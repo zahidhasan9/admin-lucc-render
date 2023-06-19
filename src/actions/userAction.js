@@ -52,7 +52,7 @@ export const login = (email, password) => {
 
       dispatch({ type:LOGIN_REQUEST });
       const config = { headers: { "Content-Type": "application/json" } };
-      const res = await axios.post(`http://localhost:2000/api/admin/signin`, {
+      const res = await axios.post(`${process.env.REACT_APP_ULR_API}/admin/signin`, {
         email, password ,
       config 
       });
